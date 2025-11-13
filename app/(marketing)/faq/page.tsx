@@ -35,7 +35,7 @@ export default function FAQPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding">
         <div className="container-custom max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-primary mb-4">
             還有其他問題？

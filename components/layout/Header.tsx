@@ -32,8 +32,8 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-200",
         isScrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-md"
-          : "bg-white"
+          ? "bg-surface/95 backdrop-blur-sm shadow-md"
+          : "bg-surface/80"
       )}
     >
       <nav className="container-custom">

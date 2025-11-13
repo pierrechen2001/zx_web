@@ -51,7 +51,7 @@ const featuredCases = [
 
 export function CasesPreview() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-surface/20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -70,7 +70,7 @@ export function CasesPreview() {
               className="group"
             >
               <div className="rounded-sm overflow-hidden hover:shadow-card-hover transition-all duration-200">
-                <div className="relative h-48 bg-white overflow-hidden border border-surface/40">
+                <div className="relative h-48 bg-surface/30 overflow-hidden border border-surface/40">
                   <div className="absolute inset-0 bg-surface/20 flex items-center justify-center">
                     <span className="text-6xl opacity-40">📸</span>
                   </div>
@@ -85,7 +85,7 @@ export function CasesPreview() {
                     {caseItem.type}
                   </div>
                 </div>
-                <div className="p-4 bg-white border-l border-r border-b border-surface/40">
+                <div className="p-4 bg-surface/30 border-l border-r border-b border-surface/40">
                   <h3 className="font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
                     {caseItem.title}
                   </h3>

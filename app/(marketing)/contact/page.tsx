@@ -29,9 +29,9 @@ export default function ContactPage() {
       </section>
 
       {/* 聯絡表單區塊 */}
-      <section className="section-padding bg-white">
+      <section className="section-padding">
         <div className="container-custom max-w-4xl mx-auto">
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30">
+          <div className="bg-surface/40 rounded-sm p-8 shadow-card border border-surface/30">
             <h2 className="text-xl font-semibold text-primary mb-2">線上諮詢</h2>
             <p className="text-text-secondary mb-6">
               填寫以下表單，我們將在 24 小時內回覆您
@@ -46,7 +46,7 @@ export default function ContactPage() {
         <div className="container-custom max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10 mb-12">
             {/* 三重總公司 */}
-            <div className="bg-white rounded-sm p-6 lg:p-8 shadow-card border border-surface/30">
+            <div className="bg-surface/40 rounded-sm p-6 lg:p-8 shadow-card border border-surface/30">
               <h3 className="text-lg font-semibold text-primary mb-4">三重總公司</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 {/* 小地圖 */}
-                <div className="mt-4 aspect-video bg-white rounded overflow-hidden border border-surface/40">
+                <div className="mt-4 aspect-video bg-surface/20 rounded overflow-hidden border border-surface/40">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d121.5!3d25.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzAwLjAiTiAxMjHCsDMwJzAwLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1234567890"
                     width="100%"
@@ -93,7 +93,7 @@ export default function ContactPage() {
             </div>
 
             {/* 台南分公司 */}
-            <div className="bg-white rounded-sm p-6 lg:p-8 shadow-card border border-surface/30">
+            <div className="bg-surface/40 rounded-sm p-6 lg:p-8 shadow-card border border-surface/30">
               <h3 className="text-lg font-semibold text-primary mb-4">台南分公司</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 {/* 小地圖 */}
-                <div className="mt-4 aspect-video bg-white rounded overflow-hidden border border-surface/40">
+                <div className="mt-4 aspect-video bg-surface/20 rounded overflow-hidden border border-surface/40">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5!2d120.2!3d23.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAwJzAwLjAiTiAxMjDCsDEyJzAwLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1234567890"
                     width="100%"
@@ -141,7 +141,7 @@ export default function ContactPage() {
           </div>
 
           {/* 社群連結 */}
-          <div className="bg-white rounded-sm p-6 lg:p-8 shadow-card border border-surface/30 text-center">
+          <div className="bg-surface/40 rounded-sm p-6 lg:p-8 shadow-card border border-surface/30 text-center">
             <h3 className="text-lg font-semibold text-primary mb-3">社群媒體</h3>
             <p className="text-sm text-text-secondary mb-4">
               關注我們的社群媒體，獲取最新資訊與優惠

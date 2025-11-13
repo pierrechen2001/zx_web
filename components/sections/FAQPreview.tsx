@@ -27,7 +27,7 @@ const faqItems = [
 
 export function FAQPreview() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -42,7 +42,7 @@ export function FAQPreview() {
           {faqItems.map((item, index) => (
             <div
               key={index}
-              className="rounded-sm p-6 border-l-2 border-l-primary/40 bg-white hover:bg-surface/10 transition-colors"
+              className="rounded-sm p-6 border-l-2 border-l-primary/40 bg-surface/20 hover:bg-surface/30 transition-colors"
             >
               <h3 className="font-semibold text-text-primary mb-3 flex items-start">
                 <span className="flex-shrink-0 text-primary font-bold mr-2">Q:</span>

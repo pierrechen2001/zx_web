@@ -161,7 +161,7 @@ export function PestsGrid() {
               className={`px-4 py-2 rounded text-sm font-medium transition-all ${
                 selectedCategory === category
                   ? "bg-primary text-white shadow-md"
-                  : "bg-white text-text-primary hover:bg-surface shadow-card border border-surface/30"
+                  : "bg-surface/30 text-text-primary hover:bg-surface shadow-card border border-surface/30"
               }`}
             >
               {category}
@@ -183,7 +183,7 @@ export function PestsGrid() {
             href={`/pests/${pest.slug}`}
             className="group"
           >
-            <div className="bg-white rounded-sm border border-surface/30 shadow-card hover:shadow-card-hover transition-all duration-200 overflow-hidden h-full flex flex-col">
+            <div className="bg-surface/30 rounded-sm border border-surface/30 shadow-card hover:shadow-card-hover transition-all duration-200 overflow-hidden h-full flex flex-col">
               {/* 頭部 */}
               <div className="bg-surface/20 p-6 text-center">
                 <div className="text-6xl mb-3">{pest.icon}</div>
@@ -191,7 +191,7 @@ export function PestsGrid() {
                   {pest.title}
                 </h3>
                 <div className="flex items-center justify-center gap-2 flex-wrap">
-                  <span className="text-xs px-3 py-1 rounded-full bg-white text-text-secondary">
+                  <span className="text-xs px-3 py-1 rounded-full bg-surface/30 text-text-secondary">
                     {pest.category}
                   </span>
                   <span className={`text-xs px-3 py-1 rounded-full ${dangerColors[pest.danger]}`}>
@@ -235,7 +235,7 @@ export function PestsGrid() {
 
       {/* 無結果提示 */}
       {filteredPests.length === 0 && (
-        <div className="text-center py-16 bg-white rounded-sm border border-surface/30 shadow-card max-w-2xl mx-auto">
+        <div className="text-center py-16 bg-surface/30 rounded-sm border border-surface/30 shadow-card max-w-2xl mx-auto">
           <div className="text-6xl mb-4">🔍</div>
           <p className="text-lg text-text-secondary mb-4">
             找不到符合條件的害蟲
@@ -253,7 +253,7 @@ export function PestsGrid() {
       )}
 
       {/* 額外資訊 */}
-      <div className="mt-12 max-w-4xl mx-auto bg-white border border-surface/40 rounded-sm p-8 text-center">
+      <div className="mt-12 max-w-4xl mx-auto bg-surface/30 border border-surface/40 rounded-sm p-8 text-center">
         <h3 className="text-xl font-semibold text-primary mb-3">
           找不到您遇到的害蟲？
         </h3>

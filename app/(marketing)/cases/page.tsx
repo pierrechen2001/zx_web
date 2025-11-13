@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CasesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary/90 text-white py-16 md:py-20">
         <div className="container-custom">

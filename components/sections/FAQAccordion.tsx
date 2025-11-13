@@ -201,7 +201,7 @@ export function FAQAccordion() {
               className={`px-4 py-2 rounded text-sm font-medium transition-all ${
                 selectedCategory === category
                   ? "bg-primary text-white shadow-md"
-                  : "bg-white text-text-primary hover:bg-surface shadow-card border border-surface/30"
+                  : "bg-surface/30 text-text-primary hover:bg-surface shadow-card border border-surface/30"
               }`}
             >
               {category}
@@ -228,7 +228,7 @@ export function FAQAccordion() {
                   <AccordionItem
                     key={faq.id}
                     value={faq.id}
-                    className="bg-white rounded-sm shadow-card px-6 border border-surface/30"
+                    className="bg-surface/30 rounded-sm shadow-card px-6 border border-surface/30"
                   >
                     <AccordionTrigger className="text-left font-semibold text-text-primary hover:text-primary">
                       {faq.question}
@@ -248,7 +248,7 @@ export function FAQAccordion() {
             <AccordionItem
               key={faq.id}
               value={faq.id}
-              className="bg-white rounded-sm shadow-card px-6 border border-surface/30"
+              className="bg-surface/30 rounded-sm shadow-card px-6 border border-surface/30"
             >
               <AccordionTrigger className="text-left font-semibold text-text-primary hover:text-primary">
                 {faq.question}
@@ -263,7 +263,7 @@ export function FAQAccordion() {
 
       {/* 無結果提示 */}
       {filteredFAQs.length === 0 && (
-        <div className="text-center py-16 bg-white rounded-sm shadow-card border border-surface/30">
+        <div className="text-center py-16 bg-surface/30 rounded-sm shadow-card border border-surface/30">
           <div className="text-6xl mb-4">🔍</div>
           <p className="text-lg text-text-secondary mb-4">
             找不到符合條件的問題

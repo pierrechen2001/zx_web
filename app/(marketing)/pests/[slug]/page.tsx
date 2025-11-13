@@ -168,9 +168,9 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-surface/30">
       {/* 返回按鈕 */}
-      <div className="bg-white border-b border-border">
+      <div className="bg-surface/30 border-b border-border">
         <div className="container-custom py-4">
           <Link href="/pests">
             <Button variant="ghost" size="sm">
@@ -201,7 +201,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 基本介紹 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">基本介紹</h2>
             <p className="text-text-primary leading-relaxed">
               {pestData.description}
@@ -209,7 +209,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 外觀特徵 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">外觀特徵</h2>
             <ul className="space-y-2">
               {pestData.characteristics.map((char, index) => (
@@ -222,7 +222,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 生活習性 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">生活習性</h2>
             <p className="text-text-primary leading-relaxed whitespace-pre-line">
               {pestData.habits}
@@ -230,7 +230,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 危害 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4 flex items-center">
               <AlertTriangle className="w-6 h-6 mr-2 text-error" />
               可能造成的危害
@@ -246,7 +246,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 專業防治方式 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">專業防治方式</h2>
             
             <h3 className="text-lg font-semibold text-text-primary mb-3">防治方法：</h3>
@@ -260,7 +260,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
             </ul>
 
             <h3 className="text-lg font-semibold text-text-primary mb-3">安全說明：</h3>
-            <p className="text-text-primary leading-relaxed bg-white/50 p-4 rounded">
+            <p className="text-text-primary leading-relaxed bg-surface/30/50 p-4 rounded">
               {pestData.professionalTreatment.safety}
             </p>
           </div>
@@ -268,7 +268,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           {/* 居家自救建議 */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* 可以做的 */}
-            <div className="bg-white rounded-sm p-6 shadow-card border border-surface/30">
+            <div className="bg-surface/30 rounded-sm p-6 shadow-card border border-surface/30">
               <h3 className="text-xl font-bold text-accent mb-4 flex items-center">
                 <CheckCircle className="w-6 h-6 mr-2" />
                 可以做的事
@@ -284,7 +284,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
             </div>
 
             {/* 不要做的 */}
-            <div className="bg-white rounded-sm p-6 shadow-card border border-surface/30">
+            <div className="bg-surface/30 rounded-sm p-6 shadow-card border border-surface/30">
               <h3 className="text-xl font-bold text-error mb-4 flex items-center">
                 <XCircle className="w-6 h-6 mr-2" />
                 不要做的事
@@ -301,7 +301,7 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
           </div>
 
           {/* 預防方法 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">預防方法</h2>
             <ul className="grid md:grid-cols-2 gap-3">
               {pestData.prevention.map((method, index) => (
@@ -322,13 +322,13 @@ export default async function PestDetailPage({ params }: { params: { slug: strin
               立即聯絡我們，專業團隊提供完整評估與防治方案
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="secondary" className="bg-surface/30 text-primary hover:bg-surface/30/90">
                 <Link href="/contact">
                   <Phone className="w-5 h-5" />
                   立即諮詢
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-surface/30/10">
                 <Link href="/cases">
                   查看相關實績
                 </Link>

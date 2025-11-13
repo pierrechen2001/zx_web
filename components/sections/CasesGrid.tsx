@@ -181,7 +181,7 @@ export function CasesGrid() {
 
       {/* 篩選區塊 */}
       <div className={`mb-8 ${showFilters ? 'block' : 'hidden md:block'}`}>
-        <div className="bg-white rounded-sm p-6 shadow-card border border-surface/30">
+        <div className="bg-surface/30 rounded-sm p-6 shadow-card border border-surface/30">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 建築類型篩選 */}
             <div>
@@ -196,7 +196,7 @@ export function CasesGrid() {
                     className={`px-4 py-2 rounded text-sm font-medium transition-all ${
                       selectedType === type
                         ? "bg-primary text-white shadow-md"
-                        : "bg-white text-text-primary hover:bg-surface/20 border border-surface/30"
+                        : "bg-surface/30 text-text-primary hover:bg-surface/20 border border-surface/30"
                     }`}
                   >
                     {type}
@@ -218,7 +218,7 @@ export function CasesGrid() {
                     className={`px-4 py-2 rounded text-sm font-medium transition-all ${
                       selectedRegion === region
                         ? "bg-primary text-white shadow-md"
-                        : "bg-white text-text-primary hover:bg-surface/20 border border-surface/30"
+                        : "bg-surface/30 text-text-primary hover:bg-surface/20 border border-surface/30"
                     }`}
                   >
                     {region}
@@ -240,7 +240,7 @@ export function CasesGrid() {
                     className={`px-4 py-2 rounded text-sm font-medium transition-all ${
                       selectedPest === pest
                         ? "bg-primary text-white shadow-md"
-                        : "bg-white text-text-primary hover:bg-surface/20 border border-surface/30"
+                        : "bg-surface/30 text-text-primary hover:bg-surface/20 border border-surface/30"
                     }`}
                   >
                     {pest}
@@ -278,7 +278,7 @@ export function CasesGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
         {filteredCases.map((caseItem, idx) => (
           <div key={caseItem.id} className="group">
-            <div className="rounded-sm overflow-hidden hover:shadow-card-hover transition-all duration-200 bg-white h-full flex flex-col border border-surface/30">
+            <div className="rounded-sm overflow-hidden hover:shadow-card-hover transition-all duration-200 bg-surface/30 h-full flex flex-col border border-surface/30">
               {/* 圖片區域 */}
               <div className="relative h-48 bg-surface/20 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -312,7 +312,7 @@ export function CasesGrid() {
               </div>
 
               {/* 內容區域 */}
-              <Link href={`/cases/${caseItem.id}`} className="p-5 flex-1 flex flex-col bg-white">
+              <Link href={`/cases/${caseItem.id}`} className="p-5 flex-1 flex flex-col bg-surface/30">
                 <h3 className="text-base font-medium text-text-primary mb-2 group-hover:text-primary transition-colors line-clamp-2">
                   {caseItem.title}
                 </h3>

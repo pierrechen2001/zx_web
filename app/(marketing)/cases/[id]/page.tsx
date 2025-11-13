@@ -103,9 +103,9 @@ export default async function CaseDetailPage({ params }: { params: { id: string 
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* 返回按鈕 */}
-      <div className="bg-white border-b border-border">
+      <div className="bg-surface/30 border-b border-border">
         <div className="container-custom py-4">
           <Link href="/cases">
             <Button variant="ghost" size="sm">
@@ -145,12 +145,12 @@ export default async function CaseDetailPage({ params }: { params: { id: string 
           </div>
 
           {/* 主要圖片 */}
-          <div className="mb-8 rounded-sm overflow-hidden bg-white border border-surface/40 aspect-video flex items-center justify-center">
+          <div className="mb-8 rounded-sm overflow-hidden bg-surface/30 border border-surface/40 aspect-video flex items-center justify-center">
             <span className="text-9xl opacity-20">📸</span>
           </div>
 
           {/* 詳細說明 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">案例說明</h2>
             <p className="text-text-primary leading-relaxed whitespace-pre-line">
               {caseData.fullDescription}
@@ -158,7 +158,7 @@ export default async function CaseDetailPage({ params }: { params: { id: string 
           </div>
 
           {/* 服務特色 */}
-          <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+          <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
             <h2 className="text-2xl font-bold text-primary mb-4">服務特色</h2>
             <ul className="space-y-3">
               {caseData.features.map((feature, index) => (
@@ -184,7 +184,7 @@ export default async function CaseDetailPage({ params }: { params: { id: string 
 
           {/* 客戶回饋 */}
           {caseData.testimonial && (
-            <div className="bg-white rounded-sm p-8 shadow-card border border-surface/30 mb-6">
+            <div className="bg-surface/30 rounded-sm p-8 shadow-card border border-surface/30 mb-6">
               <h2 className="text-2xl font-bold text-primary mb-4">客戶回饋</h2>
               <blockquote className="text-text-primary italic mb-3">
                 「{caseData.testimonial.content}」
@@ -204,13 +204,13 @@ export default async function CaseDetailPage({ params }: { params: { id: string 
               立即聯絡我們，讓專業團隊為您解決
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+              <Button asChild size="lg" variant="secondary" className="bg-surface/30 text-primary hover:bg-surface/30/90">
                 <Link href="/contact">
                   <Phone className="w-5 h-5" />
                   立即諮詢
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-surface/30/10">
                 <Link href="/cases">
                   查看更多實績
                 </Link>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-surface/20">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* 文字內容 */}
@@ -45,12 +45,12 @@ export function AboutSection() {
                 <div className="aspect-square rounded-sm bg-surface/40 overflow-hidden flex items-center justify-center border border-surface/60">
                   <span className="text-6xl">👷</span>
                 </div>
-                <div className="aspect-[4/3] rounded-sm bg-white overflow-hidden flex items-center justify-center border border-surface/40">
+                <div className="aspect-[4/3] rounded-sm bg-surface/40 overflow-hidden flex items-center justify-center border border-surface/60">
                   <span className="text-6xl">🏠</span>
                 </div>
               </div>
               <div className="space-y-4 mt-8">
-                <div className="aspect-[4/3] rounded-sm bg-white overflow-hidden flex items-center justify-center border border-surface/40">
+                <div className="aspect-[4/3] rounded-sm bg-surface/40 overflow-hidden flex items-center justify-center border border-surface/60">
                   <span className="text-6xl">✅</span>
                 </div>
                 <div className="aspect-square rounded-sm bg-surface/40 overflow-hidden flex items-center justify-center border border-surface/60">

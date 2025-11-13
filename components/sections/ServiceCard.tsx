@@ -12,7 +12,7 @@ interface ServiceCardProps {
 export function ServiceCard({ title, description, icon, href, className }: ServiceCardProps) {
   const content = (
     <div className={cn(
-      "h-full transition-all duration-200 hover:shadow-card-hover hover:scale-[1.02] cursor-pointer flex flex-col items-center text-center p-6 rounded-sm border border-surface/30 bg-white/50",
+      "h-full transition-all duration-200 hover:shadow-card-hover hover:scale-[1.02] cursor-pointer flex flex-col items-center text-center p-6 rounded-sm border border-surface/30 bg-surface/30",
       className
     )}>
       <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">

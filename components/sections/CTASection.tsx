@@ -18,13 +18,13 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+            <Button asChild size="lg" variant="secondary" className="bg-secondary text-primary hover:bg-secondary/90">
               <Link href="/contact">
                 <Phone className="w-5 h-5" />
                 立即諮詢
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
               <a href="https://line.me/" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
                 LINE 聯絡

@@ -30,7 +30,7 @@ const steps = [
 
 export function ProcessFlow() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-surface/20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -78,7 +78,7 @@ export function ProcessFlow() {
             return (
               <div
                 key={index}
-                className="flex items-start space-x-4 p-4 rounded-sm bg-white shadow-card border border-surface/30"
+                className="flex items-start space-x-4 p-4 rounded-sm bg-surface/40 shadow-card border border-surface/30"
               >
                 <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 relative">
                   <Icon className="w-6 h-6" />

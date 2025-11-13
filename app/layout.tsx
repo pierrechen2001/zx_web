@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingSocialButtons } from "@/components/interactive/FloatingSocialButtons";
+import { AntAnimation } from "@/components/interactive/AntAnimation";
 
 const notoSansTC = Noto_Sans_TC({
   subsets: ["latin"],
@@ -74,8 +75,9 @@ export default function RootLayout({
   return (
     <html lang="zh-TW" className={notoSansTC.variable}>
       <body className="antialiased">
+        <AntAnimation />
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen relative z-10">{children}</main>
         <Footer />
         <FloatingSocialButtons />
       </body>

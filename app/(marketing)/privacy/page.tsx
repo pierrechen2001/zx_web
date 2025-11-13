@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-surface/30">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary/90 text-white py-16 md:py-20">
         <div className="container-custom">
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
 
       <section className="section-padding">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto bg-white rounded-sm p-8 md:p-12 shadow-card border border-surface/30">
+          <div className="max-w-4xl mx-auto bg-surface/30 rounded-sm p-8 md:p-12 shadow-card border border-surface/30">
             <div className="prose prose-lg max-w-none">
               {/* 前言 */}
               <div className="mb-8">
