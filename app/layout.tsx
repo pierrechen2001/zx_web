@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_TC } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -12,6 +12,13 @@ const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  themeColor: "#7A5C44",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -78,21 +79,16 @@ export function Lightbox({ images, currentIndex, isOpen, onClose }: LightboxProp
           )}
 
           {/* 圖片 */}
-          <div className="flex items-center justify-center p-12">
-            <div className="relative max-w-full max-h-[80vh] bg-white rounded overflow-hidden flex items-center justify-center">
-              {/* 佔位符（實際使用時替換為真實圖片） */}
-              <div className="w-[600px] h-[400px] flex flex-col items-center justify-center text-white/50">
-                <span className="text-8xl mb-4">📸</span>
-                <p className="text-lg">圖片 {index + 1} / {images.length}</p>
-              </div>
-              {/* 實際使用時取消註解並使用 Image 元件 */}
-              {/* <Image
+          <div className="flex items-center justify-center p-12 w-full h-full">
+            <div className="relative w-full h-full max-h-[80vh] flex items-center justify-center">
+              <Image
                 src={images[index]}
                 alt={`圖片 ${index + 1}`}
                 width={1200}
                 height={800}
-                className="object-contain max-h-[80vh]"
-              /> */}
+                className="object-contain max-h-[80vh] w-auto h-auto"
+                priority
+              />
             </div>
           </div>
 

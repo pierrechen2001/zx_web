@@ -12,6 +12,7 @@ export function FloatingSocialButtons() {
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-[#06C755] hover:bg-[#05b34c] text-white shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center group hover:scale-110"
         aria-label="LINE 客服"
+        title="LINE 客服"
       >
         <MessageCircle className="w-7 h-7" />
       </a>
@@ -23,6 +24,7 @@ export function FloatingSocialButtons() {
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-[#1877F2] hover:bg-[#1464d4] text-white shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center group hover:scale-110"
         aria-label="Facebook 粉絲專頁"
+        title="Facebook 粉絲專頁"
       >
         <Facebook className="w-7 h-7" />
       </a>
@@ -34,6 +36,7 @@ export function FloatingSocialButtons() {
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center group hover:scale-110"
         aria-label="Instagram"
+        title="Instagram"
       >
         <Instagram className="w-7 h-7" />
       </a>

@@ -285,6 +285,23 @@ export function AntAnimation() {
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
+    // 頁面可見性處理
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current);
+          animationFrameRef.current = undefined;
+        }
+      } else {
+        if (!animationFrameRef.current) {
+          lastSpawnTime = Date.now(); // 重置生成時間避免累積
+          animate();
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     // 初始生成一組螞蟻
     createAntGroup();
     animate();
@@ -293,6 +310,7 @@ export function AntAnimation() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }

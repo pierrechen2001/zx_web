@@ -9,46 +9,46 @@ export function Hero() {
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             中星害蟲驅除有限公司
           </h1>
-          <p className="text-xl md:text-2xl text-text-primary mb-4 font-medium">
+          <p className="text-xl md:text-2xl text-text-primary mb-4 font-medium animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both">
             守護你的家，遠離害蟲
           </p>
-          <p className="text-lg text-text-secondary mb-8 max-w-2xl">
+          <p className="text-lg text-text-secondary mb-8 max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both">
             專業、安全、快速到府服務。政府立案，提供完善保固，使用居家友善藥劑，讓您安心無憂。
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg">
+          <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 fill-mode-both">
+            <Button asChild size="lg" className="shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
               <Link href="/contact">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 mr-2" />
                 立即諮詢
               </Link>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild variant="secondary" size="lg" className="bg-white/80 hover:bg-white shadow-sm hover:shadow-md backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300">
               <Link href="#services">
                 了解服務
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
           </div>
 
           {/* 特色標籤 */}
-          <div className="mt-12 flex flex-wrap gap-4">
-            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary border-b-2 border-primary/30">
+          <div className="mt-12 flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 fill-mode-both">
+            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary bg-white/50 backdrop-blur-sm rounded-full border border-primary/10 shadow-sm">
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="text-sm font-medium">政府立案</span>
             </div>
-            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary border-b-2 border-primary/30">
+            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary bg-white/50 backdrop-blur-sm rounded-full border border-primary/10 shadow-sm">
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="text-sm font-medium">快速到府</span>
             </div>
-            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary border-b-2 border-primary/30">
+            <div className="flex items-center space-x-2 px-4 py-2 text-text-primary bg-white/50 backdrop-blur-sm rounded-full border border-primary/10 shadow-sm">
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>

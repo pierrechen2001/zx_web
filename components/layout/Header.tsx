@@ -30,10 +30,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
+        "sticky top-0 z-50 w-full transition-all duration-300 border-b border-transparent",
         isScrolled
-          ? "bg-surface/95 backdrop-blur-sm shadow-md"
-          : "bg-surface/80"
+          ? "bg-white/80 backdrop-blur-md shadow-sm border-white/20"
+          : "bg-surface/50 backdrop-blur-sm"
       )}
     >
       <nav className="container-custom">
@@ -89,8 +89,9 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-border">
-            {navigation.map((item) => (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-border shadow-lg animate-in slide-in-from-top-5 fade-in duration-200">
+            <div className="py-4 space-y-2 container-custom">
+              {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -108,6 +109,7 @@ export function Header() {
                 </Link>
               </Button>
             </div>
+          </div>
           </div>
         )}
       </nav>

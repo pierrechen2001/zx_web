@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Home, Landmark, UtensilsCrossed, Bug, Search } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -12,24 +13,24 @@ interface ServiceCardProps {
 export function ServiceCard({ title, description, icon, href, className }: ServiceCardProps) {
   const content = (
     <div className={cn(
-      "h-full transition-all duration-200 hover:shadow-card-hover hover:scale-[1.02] cursor-pointer flex flex-col items-center text-center p-6 rounded-sm border border-surface/30 bg-surface/30",
+      "h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer flex flex-col items-center text-center p-8 rounded-xl border border-white/50 bg-white/40 backdrop-blur-md shadow-sm",
       className
     )}>
-      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-text-primary mb-2">{title}</h3>
+      <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-primary transition-colors">{title}</h3>
       {description && (
-        <p className="text-sm text-text-secondary">{description}</p>
+        <p className="text-sm text-text-secondary leading-relaxed">{description}</p>
       )}
     </div>
   );
 
   if (href) {
-    return <Link href={href}>{content}</Link>;
+    return <Link href={href} className="block h-full group">{content}</Link>;
   }
 
-  return content;
+  return <div className="h-full group">{content}</div>;
 }
 
 // 建築種類服務卡片
@@ -38,36 +39,30 @@ export function BuildingTypeCards() {
     {
       title: "居家",
       description: "住宅、公寓、透天厝等居家環境害蟲防治",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      ),
+      icon: <Home className="w-8 h-8" />,
     },
     {
       title: "文化資產",
       description: "古蹟、歷史建築專業害蟲防治",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
+      icon: <Landmark className="w-8 h-8" />,
     },
     {
       title: "餐廳及工廠",
       description: "商業空間、餐飲業、工廠等專業防治",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
+      icon: <UtensilsCrossed className="w-8 h-8" />,
     },
   ];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {buildingTypes.map((type) => (
-        <ServiceCard key={type.title} {...type} />
+      {buildingTypes.map((type, index) => (
+        <div 
+          key={type.title}
+          className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both"
+          style={{ animationDelay: `${index * 150}ms` }}
+        >
+          <ServiceCard {...type} />
+        </div>
       ))}
     </div>
   );
@@ -118,23 +113,30 @@ export function PestTypeCards() {
     },
     {
       title: "其他",
-      icon: "🔍",
+      icon: <Search className="w-8 h-8 text-primary" />,
       href: "/pests",
     },
   ];
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
-      {pestTypes.map((pest) => (
+      {pestTypes.map((pest, index) => (
         <Link
           key={pest.title}
           href={pest.href}
-          className="group flex flex-col items-center"
+          className="group flex flex-col items-center animate-in fade-in zoom-in-95 duration-500 fill-mode-both"
+          style={{ animationDelay: `${index * 100}ms` }}
           title={pest.title}
         >
-          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-surface/40 hover:bg-secondary/30 flex items-center justify-center transition-all duration-200 hover:scale-110 hover:shadow-lg group-hover:shadow-card-hover border border-surface/50">
-            <span className="text-4xl md:text-5xl">{pest.icon}</span>
+          <div className="w-24 h-24 rounded-full bg-white/60 backdrop-blur-sm hover:bg-white/80 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg border-2 border-white group-hover:border-primary/20 relative overflow-hidden">
+             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+             <span className="text-4xl md:text-5xl relative z-10">
+               {typeof pest.icon === 'string' ? pest.icon : pest.icon}
+             </span>
           </div>
+          <span className="mt-3 text-sm font-medium text-text-secondary group-hover:text-primary transition-colors">
+            {pest.title}
+          </span>
         </Link>
       ))}
     </div>
