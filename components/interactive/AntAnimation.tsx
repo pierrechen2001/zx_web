@@ -28,7 +28,7 @@ export function AntAnimation() {
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const groupsRef = useRef<AntGroup[]>([]);
   const groupIdCounter = useRef(0);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const canvas = canvasRef.current;

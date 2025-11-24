@@ -139,7 +139,7 @@ const pestsDetailData: Record<string, PestDetail> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const pestData = pestsDetailData[slug];
 
@@ -159,7 +159,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function PestDetailPage({ params }: { params: { slug: string } }) {
+export default async function PestDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const pestData = pestsDetailData[slug];
 

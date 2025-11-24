@@ -20,6 +20,14 @@ export function Lightbox({ images, currentIndex, isOpen, onClose }: LightboxProp
     setIndex(currentIndex);
   }, [currentIndex]);
 
+  const goToPrevious = useCallback(() => {
+    setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
+  }, [images.length]);
+
+  const goToNext = useCallback(() => {
+    setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
+  }, [images.length]);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -40,14 +48,6 @@ export function Lightbox({ images, currentIndex, isOpen, onClose }: LightboxProp
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, index, goToNext, goToPrevious, onClose]);
-
-  const goToPrevious = useCallback(() => {
-    setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
-  }, [images.length]);
-
-  const goToNext = useCallback(() => {
-    setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
-  }, [images.length]);
 
   if (!isOpen) return null;
 
