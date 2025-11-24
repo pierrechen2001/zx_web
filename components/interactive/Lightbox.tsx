@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
@@ -39,15 +39,15 @@ export function Lightbox({ images, currentIndex, isOpen, onClose }: LightboxProp
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, index]);
+  }, [isOpen, index, goToNext, goToPrevious, onClose]);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setIndex((prev) => (prev > 0 ? prev - 1 : images.length - 1));
-  };
+  }, [images.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setIndex((prev) => (prev < images.length - 1 ? prev + 1 : 0));
-  };
+  }, [images.length]);
 
   if (!isOpen) return null;
 

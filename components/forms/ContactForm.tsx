@@ -129,7 +129,7 @@ export function ContactForm() {
         message: "",
         agreeTerms: false,
       });
-    } catch (error) {
+    } catch {
       setErrors({ submit: "提交失敗，請稍後再試" });
     } finally {
       setIsSubmitting(false);

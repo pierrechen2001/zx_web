@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Home, Landmark, UtensilsCrossed, Bug, Search } from "lucide-react";
+import { Home, Landmark, UtensilsCrossed, Search } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;

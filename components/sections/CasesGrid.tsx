@@ -276,7 +276,7 @@ export function CasesGrid() {
 
       {/* 案例網格（瀑布流風格） */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10">
-        {filteredCases.map((caseItem, idx) => (
+        {filteredCases.map((caseItem) => (
           <div key={caseItem.id} className="group">
             <div className="rounded-sm overflow-hidden hover:shadow-card-hover transition-all duration-200 bg-surface/30 h-full flex flex-col border border-surface/30">
               {/* 圖片區域 */}

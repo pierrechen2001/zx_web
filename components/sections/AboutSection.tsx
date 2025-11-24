@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function AboutSection() {
   return (
     <section className="section-padding bg-surface/20">
